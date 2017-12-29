@@ -30,6 +30,12 @@ const createSharedAccessToken = connectionString => {
 
 const [sasToken, endpoint] = createSharedAccessToken(process.argv[2]);
 console.log('-------------------------------------------------');
-console.log('HTTPS Endpoint:', endpoint);
-console.log('SAS Token:', sasToken);
+console.log('HTTPS Endpoint:');
+console.log(endpoint);
+console.log();
+console.log('SAS Token:');
+console.log(sasToken);
+console.log();
+console.log('Test command:');
+console.log('curl -i -H \'Authorization: ' + sasToken + '\' -d {"hoge":"fuga"} ' + endpoint);
 console.log('-------------------------------------------------');
