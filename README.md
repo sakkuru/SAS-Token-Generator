@@ -3,13 +3,18 @@
 ```
 > git clone https://github.com/sakkuru/SAS-Token-Generator.git
 > cd SAS-Token-Generator
-> node app.js '<Connection String>' <- Quoted.
+> node app.js '<Connection String>' <- Quoted!
 -------------------------------------------------
-HTTPS Endpoint: <HTTPS Endpoint>
-SAS Token: <SAS Token>
--------------------------------------------------
+HTTPS Endpoint:
+<HTTPS Endpoint>
 
-> curl -i -H '<SAS Token>' -d {"hoge":"fuga"} <HTTPS Endpoint>
+SAS Token:
+<SAS Token>
+
+Test command:
+curl -i -H 'Authorization: SharedAccessSignature sr=...' -d {"hoge":"fuga"} ...
+-------------------------------------------------
+> curl -i -H 'Authorization: SharedAccessSignature sr=...' -d {"hoge":"fuga"} ...
 HTTP/2 201
 content-type: application/xml; charset=utf-8
 server: Microsoft-HTTPAPI/2.0
